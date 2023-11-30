@@ -10,10 +10,22 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       Customer_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull:'false',
+        ondelete:'CASCADE',
+        references:{
+          model:"Customers",
+          key:"id"
+        }
       },
       bill_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull:'false',
+        ondelete:'CASCADE',
+        references:{
+          model:"Bills",
+          key:"id"
+        }
       },
       date_payment: {
         type: Sequelize.DATE

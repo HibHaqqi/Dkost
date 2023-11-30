@@ -10,7 +10,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       Kost_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull:'false',
+        ondelete:'CASCADE',
+        references:{
+          model:"Kosts",
+          key:"id"
+        }
       },
       room_number: {
         type: Sequelize.STRING

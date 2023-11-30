@@ -13,7 +13,12 @@ module.exports = {
         type: Sequelize.STRING
       },
       admin_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull:'false',
+        references:{
+          model:"Admins",
+          key:"id"
+        }
       },
       address: {
         type: Sequelize.STRING

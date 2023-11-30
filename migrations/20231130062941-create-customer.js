@@ -21,7 +21,7 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
-      Ktp: {
+      ktp: {
         type: Sequelize.STRING
       },
       date_born: {
