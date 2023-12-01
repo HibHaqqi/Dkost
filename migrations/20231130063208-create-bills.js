@@ -27,7 +27,7 @@ module.exports = {
           key:"id"
         }
       },
-      date_bill: {
+      date_payment: {
         type: Sequelize.DATE
       },
       amount_bill: {

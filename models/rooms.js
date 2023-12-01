@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     Kost_id: DataTypes.INTEGER,
     room_number: DataTypes.STRING,
     price: DataTypes.INTEGER,
-    status: DataTypes.STRING
+    imgRoom: DataTypes.ARRAY(DataTypes.STRING)
   }, {
     sequelize,
     modelName: 'Rooms',

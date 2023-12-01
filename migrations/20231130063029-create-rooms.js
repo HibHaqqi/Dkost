@@ -24,8 +24,9 @@ module.exports = {
       price: {
         type: Sequelize.INTEGER
       },
-      status: {
-        type: Sequelize.STRING
+      imgRoom: {
+        type: Sequelize.STRING,
+        allowNull: true,
       },
       createdAt: {
         allowNull: false,

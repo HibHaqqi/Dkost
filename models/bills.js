@@ -17,15 +17,13 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Order, {
         foreignKey: "order_id"
       });
-      this.hasMany(models.Payment,{
-        foreignKey:`bill_id`
-       }) 
+     
     }
   }
   Bills.init({
     customer_id: DataTypes.INTEGER,
     order_id: DataTypes.INTEGER,
-    date_bill: DataTypes.DATE,
+    date_payment: DataTypes.DATE,
     amount_bill: DataTypes.INTEGER,
     status: DataTypes.STRING
   }, {
