@@ -21,9 +21,6 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
-      ktp: {
-        type: Sequelize.STRING
-      },
       date_born: {
         type: Sequelize.DATE
       },
@@ -31,6 +28,9 @@ module.exports = {
         type: Sequelize.STRING
       },
       ktp_image: {
+        type: Sequelize.STRING
+      },
+      role: {
         type: Sequelize.STRING
       },
       createdAt: {

@@ -14,9 +14,6 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.Order,{
         foreignKey:"customer_id"
       })
-      this.hasMany(models.Payment,{
-        foreignKey:"customer_id"
-      })
       this.hasMany(models.Bills,{
         foreignKey:"customer_id"
       })
@@ -27,10 +24,10 @@ module.exports = (sequelize, DataTypes) => {
     phone: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    ktp: DataTypes.STRING,
     date_born: DataTypes.DATE,
     user_image: DataTypes.STRING,
-    ktp_image: DataTypes.STRING
+    ktp_image: DataTypes.STRING,
+    role: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Customer',
