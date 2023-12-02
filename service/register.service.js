@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
- const {Customer} =require("../models")
+const {Customer} =require("../models")
 
 class RegisService {
     async regisNewCustomer(payload){

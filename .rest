@@ -14,3 +14,13 @@ Content-Type: application/json
     "role": "admin"
 
 }
+
+###
+POST  http://localhost:3000/api/users/v1/login
+Content-Type: application/json
+
+{
+    "email" : "haqqi08@gmail.com", 
+    "password": "jarwokuat"
+  
+}
