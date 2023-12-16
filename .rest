@@ -1,0 +1,26 @@
+###
+POST  http://localhost:3000/api/users/v1/regis
+Content-Type: application/json
+
+{
+
+    "name" : "jarwo",
+    "phone" : "085733999063", 
+    "email" : "haqqi08@gmail.com", 
+    "password": "jarwokuat",
+    "date_born": "11/03/1995",
+    "user_image": "urlimage",
+    "ktp_image": "urlktp",
+    "role": "admin"
+
+}
+
+###
+POST  http://localhost:3000/api/users/v1/login
+Content-Type: application/json
+
+{
+    "email" : "haqqi08@gmail.com", 
+    "password": "jarwokuat"
+  
+}
