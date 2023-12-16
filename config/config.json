@@ -1,10 +1,10 @@
 {
   "development": {
-    "username": "root",
-    "password": "eSTnUM170SlnTT5w",
-    "database": "dekost",
-    "host": "103.16.117.161",
-    "dialect": "mysql"
+    "username": "postgres",
+    "password": "12345",
+    "database": "Dkost",
+    "port": 5000,
+    "dialect": "postgres"
   },
   "test": {
     "username": "root",
