@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Room Management</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .form-container {
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Admin Room Management</h1>
+
+  <h2>Room Availability</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Room A</td>
+        <td>2023-10-01</td>
+        <td>2023-10-10</td>
+        <td>
+          <button onclick="editRoom(1, 'Room A', '2023-10-01', '2023-10-10')">Edit</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Room B</td>
+        <td>2023-10-05</td>
+        <td>2023-10-15</td>
+        <td>
+          <button onclick="editRoom(2, 'Room B', '2023-10-05', '2023-10-15')">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="form-container" id="form-container">
+    <h2>Edit Room Availability</h2>
+    <form id="edit-room-form" action="/admin/update-room" method="POST">
+      <input type="hidden" id="room-id" name="id">
+      <label for="room-name">Room Name:</label>
+      <input type="text" id="room-name" name="name" required>
+      <br>
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" name="start_date" required>
+      <br>
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date" name="end_date" required>
+      <br>
+      <button type="submit">Update</button>
+      <button type="button" onclick="closeForm()">Cancel</button>
+    </form>
+  </div>
+
+  <h2>Create Order</h2>
+  <form id="create-order-form" action="/admin/create-order" method="POST">
+    <label for="order-room-id">Room ID:</label>
+    <input type="number" id="order-room-id" name="room_id" required>
+    <br>
+    <label for="customer-name">Customer Name:</label>
+    <input type="text" id="customer-name" name="customer_name" required>
+    <br>
+    <label for="order-date">Order Date:</label>
+    <input type="date" id="order-date" name="order_date" required>
+    <br>
+    <button type="submit">Create Order</button>
+  </form>
+
+  <script>
+    function editRoom(id, name, start_date, end_date) {
+      document.getElementById('room-id').value = id;
+      document.getElementById('room-name').value = name;
+      document.getElementById('start-date').value = start_date;
+      document.getElementById('end-date').value = end_date;
+      document.getElementById('form-container').style.display = 'block';
+    }
+
+    function closeForm() {
+      document.getElementById('form-container').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

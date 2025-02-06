@@ -25,14 +25,9 @@ class LoginRegisController {
     try {
         const payload = req.body;
         const response = await loginService.customerLogin(payload);
+        res.redirect('/view');
 
-        res.status(200).json({
-            message: "anda berhasil login",
-            statusCode: 200,
-            //token,
-            data: response,
-            // role: token.role,
-        });
+        
     } catch (error) {
         res.status(401).json({ error: error.message });
     }
