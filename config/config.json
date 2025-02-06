@@ -3,7 +3,7 @@
     "username": "postgres",
     "password": "rahasia",
     "database": "Dkost",
-    "port": 5000,
+    "port": "5432",
     "dialect": "postgres"
   },
   "test": {
